@@ -1,0 +1,24 @@
+/* JAVASCRIPT CODING CHELLENGE 6 */
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JAVASCRIPT CODING CHELLENGE 6 </title>
+        <script>
+            function fibonacci()
+            {
+                var dis = []; 
+                var pre_first = 0, pre_second = 1, next;
+                document.write("<br>" + pre_first," ",pre_second);
+                for(var i = 2; i < 10; i++)
+                {
+                   next = pre_first + pre_second;
+                   dis[i] = next;
+                   pre_first = pre_second;
+                   pre_second = next;
+                }
+                return dis;
+            }
+            document.write(fibonacci());
+        </script>
+    </head>
+</html>
