@@ -1,0 +1,7 @@
+ div {
+            border: 1px solid gray;
+            width: 400px;
+            position: relative;
+            left: 35%;
+            background-color: lightgray;
+        }

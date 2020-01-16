@@ -1,0 +1,32 @@
+/* Create Student HTML Form and provides validation with javascript and display it details in a table */
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Student Form </title>
+    <h1 align="center"> STUDENT MARKS FORM </h1>
+    <hr>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div>
+        <form id="form1" align="center"><br>
+            Student Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" name="student_name" required
+                placeholder="Max 50 Character" /> <br> <br>
+            Mathematics Marks: <input type="number" name="math_mark" /> <br> <br>
+            English Marks: &nbsp; &nbsp; &nbsp; &nbsp; <input type="number" name="english_mark" /> <br> <br>
+            Passing Year: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="number" name="Passing_year"
+                placeholder="2000 to 2020 only" min=2000 max=2020 required /> <br> <br>
+            <input type="submit" name="submit" value="SHOW DATA" />
+        </form>
+    </div>
+    <hr>
+    <div id="result" align="center" width="100px"></div>
+
+    <script src="js_file.js"> </script>
+    </table>
+</body>
+
+</html>
