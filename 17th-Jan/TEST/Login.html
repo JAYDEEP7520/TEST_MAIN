@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login Page </title>
+        <h2 align = "center"> LOGIN </h2>
+        <style>
+            #main { border: 1px solid black; height: 200px; width: 300px; position: relative; left: 38%;}
+        </style>
+    </head>
+    <body>
+        <form name = "login_form">
+        <div id = "main" align = "center"> <br>
+                <input type = "email" name = "email" placeholder = "Email" size = "30"/> <br> <br>
+                <input type = "password" name = "password" placeholder = "Password" size = "30"/> <br> <br>
+                <input type = "button" name = "login" value = "LOGIN" onclick = "validate()"/> <br>
+                <p><b> OR </b></p>
+                <a href = "Regestration.html"><input type = "button" name = "register" value = "REGISTER NOW"/></a>
+        </div>
+        </form>
+        <script>
+            if(localStorage.getItem("Admin_Email"))
+            {
+                document.forms["login_form"]["register"].disabled = true;
+            }
+            function validate()
+            {
+               
+                let email = document.forms["login_form"]["email"].value;
+                let password= document.forms["login_form"]["password"].value;
+
+                if(email.length <= 0 || !/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email))
+                {
+                    alert("You have entered an invalid email address!");
+                }
+                if(password.length <= 0 || password.length >= 10)
+                {
+                    alert("Invalid Password");
+                }
+                if(localStorage.getItem("Admin_Email") == email && localStorage.getItem("Admin_Password") == password)
+                {
+                    window.location.replace("Dashboard.html");
+                }
+                else if(localStorage.getItem("SubUser_Email") == email && localStorage.getItem("SubUser_Password") == password)
+                {
+                    window.location.replace("Dashboard.html");
+                }
+                else
+                {
+                    alert("Invalid Email ID & Password");
+                }
+            }
+        </script>
+    </body>
+</html>
